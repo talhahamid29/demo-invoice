@@ -3,16 +3,11 @@ import React, { useEffect, useState } from "react";
 import VerticalNavbar from "../../components/Navbar/VerticalNavbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footers/Footer";
-import InvoiceTable from "../../components/invoiceTable/InvoiceTable";
+//import InvoiceTable from "../../components/invoiceTable/InvoiceTable";
 
 const Page = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [hasToken, setHasToken] = useState(false);
-
-  useEffect(() => {
-    const tokens = localStorage.getItem("token");
-    setHasToken(!!tokens);
-  }, []);
+  
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
@@ -42,7 +37,7 @@ const Page = () => {
             scrollbarWidth: "thin",
           }}
         >
-          <InvoiceTable />
+          {/* <InvoiceTable /> */}
         </div>
         <div className="shadow mt-5 w-full">
           <Footer />
